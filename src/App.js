@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/" element={<Shop />} />
         <Route exact path="/shop" element={<Shop />} />
         <Route path="/review" element={<OrderReview />} />
-        <Route path="inventory" element={<Inventory />} />
+        <Route path="inventory" element={<PrivateRoute><Inventory /></PrivateRoute> } />
         <Route path="/placeorder" element={<PrivateRoute> <PlaceOrder /></PrivateRoute>} />
         <Route path="/shipping" element={<PrivateRoute> <Shipping /></PrivateRoute>} />
         <Route path="/login" element={<Login />} />

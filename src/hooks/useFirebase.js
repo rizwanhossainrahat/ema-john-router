@@ -12,12 +12,13 @@ const useFirebase = () => {
 
 
     const singnInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvide)
-        // for location we return
-        // return singnInUsingGoogle;
-            .then(result => {
-                    console.log(result.user)
-            })
+          // for location we return
+        return signInWithPopup(auth, googleProvide);
+      
+        
+            // .then(result => {
+            //         console.log(result.user)
+            // })
     }
 
     const logOut=()=>{

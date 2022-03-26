@@ -4,20 +4,29 @@ import useAuth from '../../hooks/useAuth';
 import useFirebase from '../../hooks/useFirebase';
 import './Login.css'
 
+
+
 const Login = () => {
+    const navigate=useNavigate()
+    console.log(navigate)
     const {singnInUsingGoogle}=useAuth()
 
-    // const location=useLocation()
-    // const navigate=useNavigate()
-    // const redirectUri=location.state?.from || '/shop'
-    // console.log('come from',location.state?.from)
+    const location=useLocation()
+    
+    
+    
+    const redirectUri=location.state?.from || '/shop';
+    console.log('come from',location.state?.from)
 
-    // const handleGoogleSignIn=()=>{
-    //     singnInUsingGoogle()
-    //     .then(result=>{
-    //         navigate.push(redirectUri)
-    //     })
-    // }
+    
+
+    const handleGoogleSignIn=()=>{
+        singnInUsingGoogle()
+         .then(result=>{
+            navigate(redirectUri)
+       
+        })
+    }
 
     return (
         <div className='login-form'>
@@ -34,7 +43,7 @@ const Login = () => {
                 <br />
                 <p>new ema-john account <Link to='/register'>Create account</Link></p>
                 <div>
-                <button onClick={singnInUsingGoogle} className='btn-regular'>Google Sign in</button>
+                <button onClick={handleGoogleSignIn} className='btn-regular'>Google Sign in</button>
                 </div>
               
                 
