@@ -9,9 +9,9 @@ import Product from '../Product/Product';
 import ReviewItem from '../ReviewItem/ReviewItem';
 
 const OrderReview = () => {
-    const [products,setProducts]=useProducts()
+    const [setProducts]=useProducts()
     
-    const [cart,setCart]=useCart(products)
+    const [cart,setCart]=useCart()
     const navigate = useNavigate();
     
     const handleRemove=key=>{

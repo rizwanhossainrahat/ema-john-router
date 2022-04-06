@@ -2,7 +2,7 @@ import React from 'react';
 import './Cart.css';
 
 const Cart = (props) => {
-    console.log(props)
+   
     const { cart } = props;
 
     // const totalReducer = (previous, product) => previous + product.price;

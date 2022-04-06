@@ -8,7 +8,7 @@ import './Login.css'
 
 const Login = () => {
     const navigate=useNavigate()
-    console.log(navigate)
+   
     const {singnInUsingGoogle}=useAuth()
 
     const location=useLocation()
