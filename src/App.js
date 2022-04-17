@@ -11,6 +11,7 @@ import Register from './components/Register/Register';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Shipping from './components/Shipping/Shipping';
+import Orders from './components/Orders/Orders';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="inventory" element={<PrivateRoute><Inventory /></PrivateRoute> } />
         <Route path="/placeorder" element={<PrivateRoute> <PlaceOrder /></PrivateRoute>} />
         <Route path="/shipping" element={<PrivateRoute> <Shipping /></PrivateRoute>} />
+        <Route path="/orders" element={<PrivateRoute> <Orders /></PrivateRoute>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<Error />} />
